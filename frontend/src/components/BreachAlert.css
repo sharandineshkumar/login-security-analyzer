@@ -1,0 +1,137 @@
+/* Breach Alert Styles */
+.breach-alert {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    animation: fadeIn var(--transition-normal);
+}
+
+/* Safe State */
+.breach-safe {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.breach-safe .alert-icon {
+    font-size: 2rem;
+}
+
+.breach-safe .alert-title {
+    color: var(--color-strong);
+}
+
+/* Danger State */
+.breach-danger {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.05));
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.breach-danger.severity-critical {
+    animation: glow 2s ease-in-out infinite;
+    border-color: rgba(239, 68, 68, 0.6);
+}
+
+/* Alert Icon */
+.alert-icon-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.breach-danger .alert-icon {
+    font-size: 2.5rem;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.alert-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(239, 68, 68, 0.3);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Alert Content */
+.alert-content {
+    flex: 1;
+}
+
+.alert-title {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-very-weak);
+    margin-bottom: var(--spacing-xs);
+}
+
+.alert-message {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Breach Stats */
+.breach-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-very-weak);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Alert Actions */
+.alert-actions {
+    margin-top: var(--spacing-sm);
+}
+
+.alert-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--accent-primary);
+    transition: color var(--transition-fast);
+}
+
+.alert-link:hover {
+    color: var(--accent-secondary);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .breach-alert {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .alert-icon-container {
+        align-self: center;
+    }
+
+    .breach-stats {
+        justify-content: center;
+    }
+}

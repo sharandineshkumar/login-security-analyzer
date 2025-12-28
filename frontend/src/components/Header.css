@@ -1,0 +1,115 @@
+/* Header Styles */
+.header {
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+    animation: glow 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+}
+
+.logo-text h1 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Navigation */
+.header-nav {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all var(--transition-normal);
+}
+
+.nav-link:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-color-hover);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.nav-icon {
+    font-size: 1rem;
+}
+
+/* Description */
+.header-description {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.05));
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.header-description p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .header-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-description {
+        padding: var(--spacing-md);
+    }
+
+    .header-description p {
+        font-size: 0.875rem;
+    }
+}
