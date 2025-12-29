@@ -31,25 +31,17 @@ login-security-analyzer/
 ## 📦 Quick Start
 
 ### Backend
-```bash
+
 cd backend
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-```
+
 
 ### Frontend
-```bash
+
 cd frontend
 npm install
 npm run dev
-```
 
-### Chrome Extension
-1. Open Chrome → `chrome://extensions`
-2. Enable "Developer mode"
-3. Click "Load unpacked"
-4. Select the `chrome-extension` folder
 
-## 📄 License
 
-MIT License - Feel free to use and modify!
