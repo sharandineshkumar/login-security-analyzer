@@ -25,7 +25,6 @@ login-security-analyzer/
 |-----------|------------|
 | Backend | Python, FastAPI |
 | Frontend | React.js, Vite |
-| Extension | JavaScript, Chrome APIs |
 | API | Have I Been Pwned |
 
 ## 📦 Quick Start
